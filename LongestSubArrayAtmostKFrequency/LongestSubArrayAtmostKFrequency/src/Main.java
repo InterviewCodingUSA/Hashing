@@ -10,7 +10,7 @@ public class Main {
 
     private static int longestSubarrayWithAtmostKFrequency(int[] arr, int k){
         int ans = 0, start = -1;
-        HashMap<Integer, Integer> frequency = new HashMap();
+        HashMap<Integer, Integer> frequency = new HashMap<>();
 
         for (int end = 0; end < arr.length; end++) {
             frequency.put(arr[end], frequency.getOrDefault(arr[end], 0) + 1);
