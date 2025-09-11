@@ -11,7 +11,7 @@ public class Main {
     }
 
     private static String frequencySort(String str){
-        // Count up the occurances.
+        // Count up the occurrences.
         HashMap<Character, Integer> counts = new HashMap<>();
         for (char c : str.toCharArray()) {
             counts.put(c, counts.getOrDefault(c, 0) + 1);
@@ -19,7 +19,7 @@ public class Main {
 
         // Make a list of the keys, sorted by frequency.
         ArrayList<Character> characters = new ArrayList<>(counts.keySet());
-        Collections.sort(characters, (a, b) -> counts.get(b) - counts.get(a));
+        characters.sort((a, b) -> counts.get(b) - counts.get(a));
 
         // Convert the counts into a string with a sb.
         StringBuilder sb = new StringBuilder();
