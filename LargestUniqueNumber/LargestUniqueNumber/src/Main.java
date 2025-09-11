@@ -14,6 +14,7 @@ public class Main {
         if(arr.length == 0){
             return Integer.MIN_VALUE;
         }
+        
         HashMap<Integer, Integer> map = new HashMap<>();
         for(Integer i : arr){
             map.put(i, map.getOrDefault(i, 0) + 1);
